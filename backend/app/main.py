@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.health import router as health_router
-from app.api.recommend import router as recommend_router
+from backend.app.api.health import router as health_router
+from backend.app.api.recommend import router as recommend_router
 
 app = FastAPI(title="SHL Assessment Recommender")
 
@@ -16,7 +16,3 @@ app.add_middleware(
 
 app.include_router(health_router)
 app.include_router(recommend_router)
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)
