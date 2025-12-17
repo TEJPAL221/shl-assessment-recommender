@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SHL Assessment Recommender</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+    <h1>SHL Assessment Recommender</h1>
+    <p>AI-powered recommendations for hiring assessments</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <label for="queryInput">Hiring Requirement</label>
+        <textarea
+            id="queryInput"
+            placeholder="e.g. Hiring Java developers who can collaborate with business teams and complete assessments in 40 minutes">
+        </textarea>
+
+        <button onclick="getRecommendations()">Get Recommendations</button>
+        <div id="loading" class="loading hidden">Analyzing requirements...</div>
+    </div>
+
+    <div class="results">
+        <table id="resultsTable" class="hidden">
+            <thead>
+                <tr>
+                    <th>Assessment</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Remote</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Built for SHL Generative AI Assignment</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
